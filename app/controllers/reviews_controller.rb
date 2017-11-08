@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
-  before_action :set_restaurant, :set_review, only: [:edit, :update, :destroy]
+  before_action :set_restaurant
+  before_action :set_review, only: [:edit, :update, :destroy]
   def new
     # we need @restaurant in our `simple_form_for` from set_restaurant
     @review = Review.new
