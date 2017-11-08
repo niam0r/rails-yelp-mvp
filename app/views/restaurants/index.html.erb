@@ -1,2 +1,18 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<div class="container">
+  <div class="text-center">
+  <h1 class="hello">Welcome to yelp</h1>
+
+    <% @restaurants.each do |restaurant| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card ">
+          <h4><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>
+          <h6><%= restaurant.address %></h6>
+          <h6><%= restaurant.phone_number %></h6>
+          <h6><%= restaurant.category %></h6>
+
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
